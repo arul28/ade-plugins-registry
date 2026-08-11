@@ -1,34 +1,38 @@
 {
   "version": 1,
-  "generatedAt": null,
-  "notes": "Published directory for ADE plugins. Rebuilt by the crawler from the ade-plugin GitHub topic plus this repo's curated files.",
+  "generatedAt": "2026-08-11T18:15:32.780Z",
   "entries": [
     {
       "pluginId": "ade-graph",
       "displayName": "Graph",
-      "description": "Lanes, commits and PR overlays on one canvas \u2014 as an optional tab.",
-      "author": "ADE",
+      "description": "Lanes, commits and PR overlays on one canvas — as an optional tab.",
+      "author": "arul28",
       "version": "1.0.0",
       "repo": "https://github.com/arul28/ade-graph",
       "changelogUrl": "https://github.com/arul28/ade-graph/releases",
-      "icon": "graph",
-      "accent": "#7C6FF0",
       "official": true,
       "featured": true,
       "isTheme": false,
       "surfaces": [],
-      "sockets": []
+      "sockets": [],
+      "icon": "graph",
+      "accent": "#7C6FF0",
+      "stars": 0,
+      "publishedAt": "2026-08-11T18:14:08Z",
+      "updatedAt": "2026-08-11T18:14:12Z",
+      "checksums": {
+        "1.0.0": "f1e84d156c7af4fce4fdc42c25446e982deca4fbda9d6489430b490b86debcc8"
+      },
+      "readme": "## Graph\n\nLanes, commits, PR overlays, conflict risk and sync presence, drawn on one\ncanvas. Selecting a node opens that lane.\n\nGraph was part of ADE itself until plugins existed. Nothing about it changed —\nit stopped being something everyone has to carry. Install it and the Graph tab\nis in your rail; remove it and the rail is one item shorter.\n\n### What it adds\n\n- The **Graph** tab.\n\n### Notes\n\n- The canvas is drawn by the desktop app rather than published as a panel, so\n  the tab is the desktop's own page. On a phone or in the terminal the plugin\n  shows a card pointing at the machine that holds the repository.\n- The `/graph` route keeps working even with the tab hidden, so links minted\n  before you removed it still open.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
     {
       "pluginId": "ade-log-viewer",
       "displayName": "Log viewer",
       "description": "Reads the end of .log and .ndjson files in Files, with levels picked out.",
-      "author": "ADE",
+      "author": "arul28",
       "version": "1.0.0",
       "repo": "https://github.com/arul28/ade-log-viewer",
       "changelogUrl": "https://github.com/arul28/ade-log-viewer/releases",
-      "icon": "list",
-      "accent": "#4C9AFF",
       "official": true,
       "featured": true,
       "isTheme": false,
@@ -37,55 +41,85 @@
       ],
       "sockets": [
         "file-viewer"
-      ]
-    },
-    {
-      "pluginId": "ade-theme-paper",
-      "displayName": "Paper",
-      "description": "Warm paper and ink, with a clay accent. For working in daylight.",
-      "author": "ADE",
-      "version": "1.0.0",
-      "repo": "https://github.com/arul28/ade-theme-paper",
-      "changelogUrl": "https://github.com/arul28/ade-theme-paper/releases",
-      "icon": "palette",
-      "accent": "#A05C36",
-      "official": true,
-      "featured": true,
-      "isTheme": true,
-      "surfaces": [],
-      "sockets": []
-    },
-    {
-      "pluginId": "ade-theme-ink",
-      "displayName": "Ink",
-      "description": "Deep blue-black with a steel accent. Quiet under long sessions.",
-      "author": "ADE",
-      "version": "1.0.0",
-      "repo": "https://github.com/arul28/ade-theme-ink",
-      "changelogUrl": "https://github.com/arul28/ade-theme-ink/releases",
-      "icon": "palette",
-      "accent": "#6FA8C7",
-      "official": true,
-      "featured": false,
-      "isTheme": true,
-      "surfaces": [],
-      "sockets": []
+      ],
+      "icon": "list",
+      "accent": "#4C9AFF",
+      "stars": 0,
+      "publishedAt": "2026-08-11T18:14:14Z",
+      "updatedAt": "2026-08-11T18:14:18Z",
+      "checksums": {
+        "1.0.0": "3d386fecc6a79634133c4871dc858b91248c0d9de2fd816396e59c86d984bd8c"
+      },
+      "readme": "## Log viewer\n\nOpens `.log` and `.ndjson` files in the Files tab as lines rather than as a wall\nof text: levels are picked out, errors and warnings are counted, and you can\nfilter to one level without leaving the file.\n\n### What it adds\n\n- A viewer in **Files** for `.log` and `.ndjson`.\n\n### How it reads\n\nLogs get large, so it reads the **last 128 KiB** of a file rather than the whole\nthing, and only when you press Load. The panel says which part it read and how\nbig the file actually is, so a truncated view never looks like a complete one.\n\nReading goes through ADE's own file action on the machine that holds the file —\nthe same path, and the same workspace boundary, as the editor. Parsing happens\nthere too; what reaches your screen (or your phone) is the parsed rows.\n\nNDJSON lines are read as structured records: `level`, `msg`/`message`, and a\ntimestamp field are used when present, including pino and bunyan numeric levels.\nPlain text lines fall back to a leading timestamp and a level word.\n\n### Settings\n\n- **Lines to show** — how many of the most recent lines the panel lists, up to\n  100.\n\n### Limits worth knowing\n\n- One panel per plugin, so two log files open at once share the view and the\n  most recent Load wins. The panel names the file it read.\n- It does not follow a file as it grows. Press Reload."
     },
     {
       "pluginId": "ade-theme-contrast",
       "displayName": "High contrast",
       "description": "Maximum separation between text, edges and background. For bad light and tired eyes.",
-      "author": "ADE",
+      "author": "arul28",
       "version": "1.0.0",
       "repo": "https://github.com/arul28/ade-theme-contrast",
       "changelogUrl": "https://github.com/arul28/ade-theme-contrast/releases",
-      "icon": "palette",
-      "accent": "#FFD54A",
       "official": true,
       "featured": false,
       "isTheme": true,
       "surfaces": [],
-      "sockets": []
+      "sockets": [],
+      "icon": "palette",
+      "accent": "#FFD54A",
+      "stars": 0,
+      "publishedAt": "2026-08-11T18:14:31Z",
+      "updatedAt": "2026-08-11T18:14:35Z",
+      "checksums": {
+        "1.0.0": "482c3817176d0fcd0a29cf3600838161da44ae51642ae3e6802a8ca5b57c99f9"
+      },
+      "readme": "## High contrast\n\nBlack on white and white on black, with edges you can actually see: borders and\nseparators are raised well above ADE's default whisper, and muted text stops\nbeing muted. For bad light, glare, and eyes at the end of a long day.\n\nThe accents are chosen for separation rather than for taste — amber on black,\nstrong blue on white — and the status colours are pushed to match, so a warning\nstill reads as a warning at a glance.\n\nBoth sets ship, so switching between light and dark keeps the theme.\n\nNote: coverage is as good as ADE's own design tokens. Surfaces that still carry\nhard-coded colours are unchanged by any theme, this one included."
+    },
+    {
+      "pluginId": "ade-theme-ink",
+      "displayName": "Ink",
+      "description": "Deep blue-black with a steel accent. Quiet under long sessions.",
+      "author": "arul28",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-theme-ink",
+      "changelogUrl": "https://github.com/arul28/ade-theme-ink/releases",
+      "official": true,
+      "featured": false,
+      "isTheme": true,
+      "surfaces": [],
+      "sockets": [],
+      "icon": "palette",
+      "accent": "#6FA8C7",
+      "stars": 0,
+      "publishedAt": "2026-08-11T18:14:26Z",
+      "updatedAt": "2026-08-11T18:14:30Z",
+      "checksums": {
+        "1.0.0": "f3629aff74df060b3b8d1dcb09acf56b1062039303c24a0066c97f283d83fcfe"
+      },
+      "readme": "## Ink\n\nDeep blue-black with a steel accent. Lower saturation than the default palette\nand no violet, for people who spend the whole day in one window and want the\ninterface to stop asking for attention.\n\nShips both sets: the dark one is the point, and the light one keeps the same\nsteel accent at a contrast that works on white."
+    },
+    {
+      "pluginId": "ade-theme-paper",
+      "displayName": "Paper",
+      "description": "Warm paper and ink, with a clay accent. For working in daylight.",
+      "author": "arul28",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-theme-paper",
+      "changelogUrl": "https://github.com/arul28/ade-theme-paper/releases",
+      "official": true,
+      "featured": true,
+      "isTheme": true,
+      "surfaces": [],
+      "sockets": [],
+      "icon": "palette",
+      "accent": "#A05C36",
+      "stars": 0,
+      "publishedAt": "2026-08-11T18:14:19Z",
+      "updatedAt": "2026-08-11T18:14:24Z",
+      "checksums": {
+        "1.0.0": "3368d735b474c3df2679d9b6eb4ac0539135c25104f1163e748f8a9c8956dca4"
+      },
+      "readme": "## Paper\n\nWarm paper and ink, with a clay accent — the palette of something printed rather\nthan something emitted. Made for working in daylight, where ADE's default dark\nsurfaces go flat.\n\nShips both a light and a dark set. A theme that defines only one of them silently\ngives up half of itself the moment you switch, so the dark set here is the same\npalette after sundown: warm browns, the same clay accent lifted for contrast.\n\nPreview it before applying — the Marketplace paints the whole app while you look\nat it, and Escape puts it back."
     }
   ]
 }
