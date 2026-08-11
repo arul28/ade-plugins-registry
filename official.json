@@ -44,6 +44,36 @@
       "checksums": {
         "1.0.0": "482c3817176d0fcd0a29cf3600838161da44ae51642ae3e6802a8ca5b57c99f9"
       }
+    },
+    "ade-review": {
+      "repo": "https://github.com/arul28/ade-review",
+      "checksums": {
+        "1.0.0": "3ae617ec717bd73c3dd25d9625d1f813bd553a87078e1f9b9a7302ab363cd90f"
+      }
+    },
+    "ade-history": {
+      "repo": "https://github.com/arul28/ade-history",
+      "checksums": {
+        "1.0.0": "241a2a21dc932f32c1e653b1298ea3d98f53fb68dc90c31ca4eddf87c6076570"
+      }
+    },
+    "ade-linear": {
+      "repo": "https://github.com/arul28/ade-linear",
+      "checksums": {
+        "1.0.0": "5178d028d994ad9497630b898b2d4c05a7e7999726a800e5c3c672992bab932d"
+      }
+    },
+    "ade-ios-sim": {
+      "repo": "https://github.com/arul28/ade-ios-sim",
+      "checksums": {
+        "1.0.0": "8523a703fc1c3cb2dde158134e516d4d149bc77eb2af92ba32e58cccf5d0b57c"
+      }
+    },
+    "ade-app-control": {
+      "repo": "https://github.com/arul28/ade-app-control",
+      "checksums": {
+        "1.0.0": "c8d8b0a9fc6e76ba3b7cecc9836ff0e81075690d20a7720e85a4f63b3c6bbfee"
+      }
     }
   }
 }
