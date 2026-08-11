@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "generatedAt": null,
+  "notes": "Published directory for ADE plugins. Rebuilt by the crawler from the ade-plugin GitHub topic plus this repo's curated files.",
+  "entries": [
+    {
+      "pluginId": "ade-graph",
+      "displayName": "Graph",
+      "description": "Lanes, commits and PR overlays on one canvas \u2014 as an optional tab.",
+      "author": "ADE",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-graph",
+      "changelogUrl": "https://github.com/arul28/ade-graph/releases",
+      "icon": "graph",
+      "accent": "#7C6FF0",
+      "official": true,
+      "featured": true,
+      "isTheme": false,
+      "surfaces": [],
+      "sockets": []
+    },
+    {
+      "pluginId": "ade-log-viewer",
+      "displayName": "Log viewer",
+      "description": "Reads the end of .log and .ndjson files in Files, with levels picked out.",
+      "author": "ADE",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-log-viewer",
+      "changelogUrl": "https://github.com/arul28/ade-log-viewer/releases",
+      "icon": "list",
+      "accent": "#4C9AFF",
+      "official": true,
+      "featured": true,
+      "isTheme": false,
+      "surfaces": [
+        "files"
+      ],
+      "sockets": [
+        "file-viewer"
+      ]
+    },
+    {
+      "pluginId": "ade-theme-paper",
+      "displayName": "Paper",
+      "description": "Warm paper and ink, with a clay accent. For working in daylight.",
+      "author": "ADE",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-theme-paper",
+      "changelogUrl": "https://github.com/arul28/ade-theme-paper/releases",
+      "icon": "palette",
+      "accent": "#A05C36",
+      "official": true,
+      "featured": true,
+      "isTheme": true,
+      "surfaces": [],
+      "sockets": []
+    },
+    {
+      "pluginId": "ade-theme-ink",
+      "displayName": "Ink",
+      "description": "Deep blue-black with a steel accent. Quiet under long sessions.",
+      "author": "ADE",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-theme-ink",
+      "changelogUrl": "https://github.com/arul28/ade-theme-ink/releases",
+      "icon": "palette",
+      "accent": "#6FA8C7",
+      "official": true,
+      "featured": false,
+      "isTheme": true,
+      "surfaces": [],
+      "sockets": []
+    },
+    {
+      "pluginId": "ade-theme-contrast",
+      "displayName": "High contrast",
+      "description": "Maximum separation between text, edges and background. For bad light and tired eyes.",
+      "author": "ADE",
+      "version": "1.0.0",
+      "repo": "https://github.com/arul28/ade-theme-contrast",
+      "changelogUrl": "https://github.com/arul28/ade-theme-contrast/releases",
+      "icon": "palette",
+      "accent": "#FFD54A",
+      "official": true,
+      "featured": false,
+      "isTheme": true,
+      "surfaces": [],
+      "sockets": []
+    }
+  ]
+}

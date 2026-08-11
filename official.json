@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "notes": [
+    "The Official set, and the digests ADE vouches for.",
+    "",
+    "`official` is set HERE and nowhere else. A plugin's own manifest may claim",
+    "`\"official\": true` \u2014 anyone can write that \u2014 so the crawler ignores the manifest's",
+    "claim and takes the flag from this file. Being official is a statement ADE makes",
+    "about a plugin, not one the plugin makes about itself.",
+    "",
+    "`checksums` maps a released version to the sha256 of that version's source tree",
+    "(see README, 'Official signing'). The installer refuses a version whose bytes",
+    "disagree with a published digest; a version with no digest installs as unverified.",
+    "The maps start empty: a digest is added when a version is tagged, computed from",
+    "the tag, and never edited afterwards."
+  ],
+  "plugins": {
+    "ade-graph": {
+      "repo": "https://github.com/arul28/ade-graph",
+      "checksums": {
+        "1.0.0": "f1e84d156c7af4fce4fdc42c25446e982deca4fbda9d6489430b490b86debcc8"
+      }
+    },
+    "ade-log-viewer": {
+      "repo": "https://github.com/arul28/ade-log-viewer",
+      "checksums": {
+        "1.0.0": "3d386fecc6a79634133c4871dc858b91248c0d9de2fd816396e59c86d984bd8c"
+      }
+    },
+    "ade-theme-paper": {
+      "repo": "https://github.com/arul28/ade-theme-paper",
+      "checksums": {
+        "1.0.0": "3368d735b474c3df2679d9b6eb4ac0539135c25104f1163e748f8a9c8956dca4"
+      }
+    },
+    "ade-theme-ink": {
+      "repo": "https://github.com/arul28/ade-theme-ink",
+      "checksums": {
+        "1.0.0": "f3629aff74df060b3b8d1dcb09acf56b1062039303c24a0066c97f283d83fcfe"
+      }
+    },
+    "ade-theme-contrast": {
+      "repo": "https://github.com/arul28/ade-theme-contrast",
+      "checksums": {
+        "1.0.0": "482c3817176d0fcd0a29cf3600838161da44ae51642ae3e6802a8ca5b57c99f9"
+      }
+    }
+  }
+}
