@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T16:39:49.500Z",
+  "generatedAt": "2026-08-13T16:41:41.194Z",
   "entries": [
     {
       "pluginId": "ade-app-control",
@@ -15,9 +15,16 @@
       "isTheme": false,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "desktop",
       "icon": "desktop",
+      "iconColor": "#47848F",
       "accent": "#47848F",
+      "links": {
+        "repository": "https://github.com/arul28/ade-app-control",
+        "changelog": "https://github.com/arul28/ade-app-control/releases"
+      },
       "stars": 0,
+      "sizeBytes": 4096,
       "publishedAt": "2026-08-11T19:33:02Z",
       "updatedAt": "2026-08-13T03:35:32Z",
       "checksums": {
@@ -39,9 +46,16 @@
       "isTheme": false,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "graph",
       "icon": "graph",
+      "iconColor": "#6366F1",
       "accent": "#6366F1",
+      "links": {
+        "repository": "https://github.com/arul28/ade-graph",
+        "changelog": "https://github.com/arul28/ade-graph/releases"
+      },
       "stars": 0,
+      "sizeBytes": 2048,
       "publishedAt": "2026-08-11T18:14:08Z",
       "updatedAt": "2026-08-13T03:35:25Z",
       "checksums": {
@@ -63,9 +77,16 @@
       "isTheme": false,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "clock-counter-clockwise",
       "icon": "clock-counter-clockwise",
+      "iconColor": "#E0932F",
       "accent": "#E0932F",
+      "links": {
+        "repository": "https://github.com/arul28/ade-history",
+        "changelog": "https://github.com/arul28/ade-history/releases"
+      },
       "stars": 0,
+      "sizeBytes": 1024,
       "publishedAt": "2026-08-11T19:32:43Z",
       "updatedAt": "2026-08-13T03:35:28Z",
       "checksums": {
@@ -87,9 +108,16 @@
       "isTheme": false,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "device-mobile",
       "icon": "device-mobile",
+      "iconColor": "#8A8F98",
       "accent": "#8A8F98",
+      "links": {
+        "repository": "https://github.com/arul28/ade-ios-sim",
+        "changelog": "https://github.com/arul28/ade-ios-sim/releases"
+      },
       "stars": 0,
+      "sizeBytes": 4096,
       "publishedAt": "2026-08-11T19:32:56Z",
       "updatedAt": "2026-08-13T03:35:31Z",
       "checksums": {
@@ -111,9 +139,16 @@
       "isTheme": false,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "list-checks",
       "icon": "list-checks",
+      "iconColor": "#5E6AD2",
       "accent": "#5E6AD2",
+      "links": {
+        "repository": "https://github.com/arul28/ade-linear",
+        "changelog": "https://github.com/arul28/ade-linear/releases"
+      },
       "stars": 0,
+      "sizeBytes": 5120,
       "publishedAt": "2026-08-11T19:32:50Z",
       "updatedAt": "2026-08-13T03:35:30Z",
       "checksums": {
@@ -139,9 +174,16 @@
       "sockets": [
         "file-viewer"
       ],
+      "iconGlyph": "rows",
       "icon": "rows",
+      "iconColor": "#4C9AFF",
       "accent": "#4C9AFF",
+      "links": {
+        "repository": "https://github.com/arul28/ade-log-viewer",
+        "changelog": "https://github.com/arul28/ade-log-viewer/releases"
+      },
       "stars": 0,
+      "sizeBytes": 8192,
       "publishedAt": "2026-08-11T18:14:14Z",
       "updatedAt": "2026-08-13T03:35:26Z",
       "checksums": {
@@ -163,9 +205,16 @@
       "isTheme": false,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "git-pull-request",
       "icon": "git-pull-request",
+      "iconColor": "#22A06B",
       "accent": "#22A06B",
+      "links": {
+        "repository": "https://github.com/arul28/ade-review",
+        "changelog": "https://github.com/arul28/ade-review/releases"
+      },
       "stars": 0,
+      "sizeBytes": 1024,
       "publishedAt": "2026-08-11T19:32:36Z",
       "updatedAt": "2026-08-13T03:35:27Z",
       "checksums": {
@@ -187,9 +236,16 @@
       "isTheme": true,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "palette",
       "icon": "palette",
+      "iconColor": "#FFD54A",
       "accent": "#FFD54A",
+      "links": {
+        "repository": "https://github.com/arul28/ade-theme-contrast",
+        "changelog": "https://github.com/arul28/ade-theme-contrast/releases"
+      },
       "stars": 0,
+      "sizeBytes": 3072,
       "publishedAt": "2026-08-11T18:14:31Z",
       "updatedAt": "2026-08-13T03:35:36Z",
       "checksums": {
@@ -211,9 +267,16 @@
       "isTheme": true,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "palette",
       "icon": "palette",
+      "iconColor": "#6FA8C7",
       "accent": "#6FA8C7",
+      "links": {
+        "repository": "https://github.com/arul28/ade-theme-ink",
+        "changelog": "https://github.com/arul28/ade-theme-ink/releases"
+      },
       "stars": 0,
+      "sizeBytes": 3072,
       "publishedAt": "2026-08-11T18:14:26Z",
       "updatedAt": "2026-08-13T03:35:35Z",
       "checksums": {
@@ -235,9 +298,16 @@
       "isTheme": true,
       "surfaces": [],
       "sockets": [],
+      "iconGlyph": "palette",
       "icon": "palette",
+      "iconColor": "#A05C36",
       "accent": "#A05C36",
+      "links": {
+        "repository": "https://github.com/arul28/ade-theme-paper",
+        "changelog": "https://github.com/arul28/ade-theme-paper/releases"
+      },
       "stars": 0,
+      "sizeBytes": 3072,
       "publishedAt": "2026-08-11T18:14:19Z",
       "updatedAt": "2026-08-13T03:35:33Z",
       "checksums": {
@@ -260,10 +330,24 @@
       "surfaces": [
         "work"
       ],
-      "sockets": [],
+      "sockets": [
+        "composer-action"
+      ],
+      "iconGlyph": "microphone",
       "icon": "microphone",
+      "iconColor": "#C2508B",
       "accent": "#C2508B",
+      "links": {
+        "repository": "https://github.com/arul28/ade-voice",
+        "changelog": "https://github.com/arul28/ade-voice/releases"
+      },
       "stars": 0,
+      "extraDownloads": [
+        {
+          "label": "Speech model",
+          "bytes": 147964211
+        }
+      ],
       "publishedAt": "2026-08-13T16:38:55Z",
       "updatedAt": "2026-08-13T16:38:58Z",
       "checksums": {
