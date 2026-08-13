@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T19:33:33.940Z",
+  "generatedAt": "2026-08-13T03:36:32.323Z",
   "entries": [
     {
       "pluginId": "ade-app-control",
-      "displayName": "App Control",
-      "description": "Drive and inspect desktop apps from the Work tools.",
+      "displayName": "Electron Control",
+      "description": "Drive and inspect Electron apps from the Work tools.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-app-control",
       "changelogUrl": "https://github.com/arul28/ade-app-control/releases",
       "official": true,
@@ -16,21 +16,22 @@
       "surfaces": [],
       "sockets": [],
       "icon": "desktop",
-      "accent": "#7C6FF0",
+      "accent": "#47848F",
       "stars": 0,
       "publishedAt": "2026-08-11T19:33:02Z",
-      "updatedAt": "2026-08-11T19:33:06Z",
+      "updatedAt": "2026-08-13T03:35:32Z",
       "checksums": {
-        "1.0.0": "c8d8b0a9fc6e76ba3b7cecc9836ff0e81075690d20a7720e85a4f63b3c6bbfee"
+        "1.0.0": "c8d8b0a9fc6e76ba3b7cecc9836ff0e81075690d20a7720e85a4f63b3c6bbfee",
+        "1.0.1": "5b673af991edee155a3d567846aed68c9a83dac270031a1268ecc8c0c394c0f4"
       },
-      "readme": "## App Control\n\nDrive and inspect a desktop app from ADE — launch it or attach to one already\nrunning, click and type in it, read its logs, and pull what is on screen into\nthe chat.\n\nApp Control was part of ADE itself until plugins existed. Nothing about it\nchanged — it stopped being something everyone has to carry.\n\n### What it adds\n\n- The **App Control** pane in the Work tools, and its chat drawer.\n\n### Notes\n\n- It drives apps on the computer this project is attached to, so it is a desktop\n  pane. On a phone or in the terminal the plugin shows a card pointing there.\n- The pane is drawn by the desktop app rather than published as a panel, because\n  it owns a live connection to the app it is driving.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
+      "readme": "## Electron Control\n\nDrive and inspect an Electron app from ADE — launch it or attach to one already\nrunning, click and type in it, read its logs, and pull what is on screen into\nthe chat.\n\nIt works over the Chrome DevTools Protocol, so it drives Electron and Chromium\napps rather than native desktop apps.\n\nElectron Control was part of ADE itself until plugins existed. Nothing about it\nchanged — it stopped being something everyone has to carry.\n\n### What it adds\n\n- The **Electron Control** pane in the Work tools, and its chat drawer.\n\n### Notes\n\n- It drives apps on the computer this project is attached to, so it is a desktop\n  pane. On a phone or in the terminal the plugin shows a card pointing there.\n- The pane is drawn by the desktop app rather than published as a panel, because\n  it owns a live connection to the app it is driving.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
     {
       "pluginId": "ade-graph",
       "displayName": "Graph",
       "description": "Lanes, commits and PR overlays on one canvas — as an optional tab.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-graph",
       "changelogUrl": "https://github.com/arul28/ade-graph/releases",
       "official": true,
@@ -39,21 +40,22 @@
       "surfaces": [],
       "sockets": [],
       "icon": "graph",
-      "accent": "#7C6FF0",
+      "accent": "#6366F1",
       "stars": 0,
       "publishedAt": "2026-08-11T18:14:08Z",
-      "updatedAt": "2026-08-11T18:14:12Z",
+      "updatedAt": "2026-08-13T03:35:25Z",
       "checksums": {
-        "1.0.0": "f1e84d156c7af4fce4fdc42c25446e982deca4fbda9d6489430b490b86debcc8"
+        "1.0.0": "f1e84d156c7af4fce4fdc42c25446e982deca4fbda9d6489430b490b86debcc8",
+        "1.0.1": "d619e5166870da231efe8e6c04341ab557f3e86e46302fb7d67cb578c32abd30"
       },
-      "readme": "## Graph\n\nLanes, commits, PR overlays, conflict risk and sync presence, drawn on one\ncanvas. Selecting a node opens that lane.\n\nGraph was part of ADE itself until plugins existed. Nothing about it changed —\nit stopped being something everyone has to carry. Install it and the Graph tab\nis in your rail; remove it and the rail is one item shorter.\n\n### What it adds\n\n- The **Graph** tab.\n\n### Notes\n\n- The canvas is drawn by the desktop app rather than published as a panel, so\n  the tab is the desktop's own page. On a phone or in the terminal the plugin\n  shows a card pointing at the machine that holds the repository.\n- The `/graph` route keeps working even with the tab hidden, so links minted\n  before you removed it still open.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
+      "readme": "## Graph\n\nLanes, commits, PR overlays, conflict risk and sync presence, drawn on one\ncanvas. Selecting a node opens that lane.\n\nGraph was part of ADE itself until plugins existed. Nothing about it changed —\nit stopped being something everyone has to carry. Install it and the Graph tab\nis in your rail; remove it and the rail is one item shorter.\n\n### What it adds\n\n- The **Graph** tab.\n\n### Notes\n\n- The canvas is drawn by the desktop app rather than published as a panel, so\n  the tab is the desktop's own page. On a phone or in the terminal the plugin\n  shows a card pointing at the machine that holds the repository.\n- The `/graph` route and Graph deeplinks open only while this plugin is\n  installed and enabled. Otherwise ADE shows a plain unavailable error.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
     {
       "pluginId": "ade-history",
       "displayName": "History",
       "description": "Commits, lane operations and captured artifacts — as an optional tab.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-history",
       "changelogUrl": "https://github.com/arul28/ade-history/releases",
       "official": true,
@@ -62,12 +64,13 @@
       "surfaces": [],
       "sockets": [],
       "icon": "clock-counter-clockwise",
-      "accent": "#7C6FF0",
+      "accent": "#E0932F",
       "stars": 0,
       "publishedAt": "2026-08-11T19:32:43Z",
-      "updatedAt": "2026-08-11T19:32:48Z",
+      "updatedAt": "2026-08-13T03:35:28Z",
       "checksums": {
-        "1.0.0": "241a2a21dc932f32c1e653b1298ea3d98f53fb68dc90c31ca4eddf87c6076570"
+        "1.0.0": "241a2a21dc932f32c1e653b1298ea3d98f53fb68dc90c31ca4eddf87c6076570",
+        "1.0.1": "1dd4e446820a8a9e0c74e40650bd561ac3d6c6102269d66e36b9391d1636d6ae"
       },
       "readme": "## History\n\nCommits, lane operations, branch links and the artifacts ADE captured along the\nway — everything that already happened in this project, in one place.\n\nHistory was part of ADE itself until plugins existed. Nothing about it changed —\nit stopped being something everyone has to carry. Install it and the History tab\nis in your rail; remove it and the rail is one item shorter.\n\n### What it adds\n\n- The **History** tab.\n\n### Notes\n\n- The page is drawn by the desktop app rather than published as a panel. On a\n  phone or in the terminal the plugin shows a card pointing at the computer that\n  holds the repository.\n- The `/history` route and artifact links open only while this plugin is\n  installed and enabled. Otherwise ADE says plainly that it is not here.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
@@ -76,7 +79,7 @@
       "displayName": "iOS Simulator",
       "description": "Drive an iOS Simulator from the Work tools, on a Mac.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-ios-sim",
       "changelogUrl": "https://github.com/arul28/ade-ios-sim/releases",
       "official": true,
@@ -85,12 +88,13 @@
       "surfaces": [],
       "sockets": [],
       "icon": "device-mobile",
-      "accent": "#7C6FF0",
+      "accent": "#8A8F98",
       "stars": 0,
       "publishedAt": "2026-08-11T19:32:56Z",
-      "updatedAt": "2026-08-11T19:33:00Z",
+      "updatedAt": "2026-08-13T03:35:31Z",
       "checksums": {
-        "1.0.0": "8523a703fc1c3cb2dde158134e516d4d149bc77eb2af92ba32e58cccf5d0b57c"
+        "1.0.0": "8523a703fc1c3cb2dde158134e516d4d149bc77eb2af92ba32e58cccf5d0b57c",
+        "1.0.1": "8ab14013022bbf68998af87cf8b86cd04d6da09a234a02726238db092bee06e9"
       },
       "readme": "## iOS Simulator\n\nDrive an iOS Simulator from ADE — boot it, tap and type in it, watch the screen,\nand open it beside the chat that is building the app.\n\nSimulator control was part of ADE itself until plugins existed. Nothing about it\nchanged — it stopped being something everyone has to carry, including the people\nwho never open Xcode.\n\n### What it adds\n\n- The **iOS Simulator** pane in the Work tools, and its chat drawer.\n\n### Notes\n\n- It needs a Mac. On anything else the pane stays hidden even with the plugin\n  installed.\n- The pane is drawn by the desktop app rather than published as a panel, because\n  it drives a real simulator. On a phone or in the terminal the plugin shows a\n  card pointing at the Mac.\n- Agents can open the drawer with `ade ios-sim` — but only while this plugin is\n  installed and enabled.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
@@ -99,7 +103,7 @@
       "displayName": "Linear",
       "description": "Open and browse Linear issues without leaving ADE.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-linear",
       "changelogUrl": "https://github.com/arul28/ade-linear/releases",
       "official": true,
@@ -108,12 +112,13 @@
       "surfaces": [],
       "sockets": [],
       "icon": "list-checks",
-      "accent": "#7C6FF0",
+      "accent": "#5E6AD2",
       "stars": 0,
       "publishedAt": "2026-08-11T19:32:50Z",
-      "updatedAt": "2026-08-11T19:32:54Z",
+      "updatedAt": "2026-08-13T03:35:30Z",
       "checksums": {
-        "1.0.0": "5178d028d994ad9497630b898b2d4c05a7e7999726a800e5c3c672992bab932d"
+        "1.0.0": "5178d028d994ad9497630b898b2d4c05a7e7999726a800e5c3c672992bab932d",
+        "1.0.1": "b567652ad072a03d3153a938cb7d11004fc1b023ec842ccfe2d1a0c9bf57bb6e"
       },
       "readme": "## Linear\n\nBrowse and open Linear issues without leaving ADE — from the top bar, from an\nissue key mentioned in a session, or from a link someone sent you.\n\nLinear browsing was part of ADE itself until plugins existed. Nothing about it\nchanged — it stopped being something everyone has to carry. Install it and the\nLinear button is back; remove it and every way in goes quiet.\n\n### What it adds\n\n- The **Linear** pane, its top-bar button, and the issue pickers that open it.\n\n### Notes\n\n- Connecting your Linear account is separate and stays where it is, in Settings.\n  Agents keep using that connection whether or not this plugin is installed.\n- The issue browser is drawn by the desktop app rather than published as a\n  panel. On a phone or in the terminal the plugin shows a card pointing at the\n  computer this project is attached to.\n- Linear links open only while this plugin is installed and enabled there.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
@@ -122,7 +127,7 @@
       "displayName": "Log viewer",
       "description": "Reads the end of .log and .ndjson files in Files, with levels picked out.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-log-viewer",
       "changelogUrl": "https://github.com/arul28/ade-log-viewer/releases",
       "official": true,
@@ -134,13 +139,14 @@
       "sockets": [
         "file-viewer"
       ],
-      "icon": "list",
+      "icon": "rows",
       "accent": "#4C9AFF",
       "stars": 0,
       "publishedAt": "2026-08-11T18:14:14Z",
-      "updatedAt": "2026-08-11T18:14:18Z",
+      "updatedAt": "2026-08-13T03:35:26Z",
       "checksums": {
-        "1.0.0": "3d386fecc6a79634133c4871dc858b91248c0d9de2fd816396e59c86d984bd8c"
+        "1.0.0": "3d386fecc6a79634133c4871dc858b91248c0d9de2fd816396e59c86d984bd8c",
+        "1.0.1": "034471c94f16063522e04740ce3779448dac3b26c5daf632cee6943ec921f6da"
       },
       "readme": "## Log viewer\n\nOpens `.log` and `.ndjson` files in the Files tab as lines rather than as a wall\nof text: levels are picked out, errors and warnings are counted, and you can\nfilter to one level without leaving the file.\n\n### What it adds\n\n- A viewer in **Files** for `.log` and `.ndjson`.\n\n### How it reads\n\nLogs get large, so it reads the **last 128 KiB** of a file rather than the whole\nthing, and only when you press Load. The panel says which part it read and how\nbig the file actually is, so a truncated view never looks like a complete one.\n\nReading goes through ADE's own file action on the machine that holds the file —\nthe same path, and the same workspace boundary, as the editor. Parsing happens\nthere too; what reaches your screen (or your phone) is the parsed rows.\n\nNDJSON lines are read as structured records: `level`, `msg`/`message`, and a\ntimestamp field are used when present, including pino and bunyan numeric levels.\nPlain text lines fall back to a leading timestamp and a level word.\n\n### Settings\n\n- **Lines to show** — how many of the most recent lines the panel lists, up to\n  100.\n\n### Limits worth knowing\n\n- One panel per plugin, so two log files open at once share the view and the\n  most recent Load wins. The panel names the file it read.\n- It does not follow a file as it grows. Press Reload."
     },
@@ -149,7 +155,7 @@
       "displayName": "Review",
       "description": "AI review passes over your project and pull requests — as an optional tab.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-review",
       "changelogUrl": "https://github.com/arul28/ade-review/releases",
       "official": true,
@@ -158,12 +164,13 @@
       "surfaces": [],
       "sockets": [],
       "icon": "git-pull-request",
-      "accent": "#7C6FF0",
+      "accent": "#22A06B",
       "stars": 0,
       "publishedAt": "2026-08-11T19:32:36Z",
-      "updatedAt": "2026-08-11T19:32:41Z",
+      "updatedAt": "2026-08-13T03:35:27Z",
       "checksums": {
-        "1.0.0": "3ae617ec717bd73c3dd25d9625d1f813bd553a87078e1f9b9a7302ab363cd90f"
+        "1.0.0": "3ae617ec717bd73c3dd25d9625d1f813bd553a87078e1f9b9a7302ab363cd90f",
+        "1.0.1": "56e19072cfb1b9e9410e5ab2116574411c85cd89486e8caf527b727737d77e89"
       },
       "readme": "## Review\n\nRun AI review passes over your project and pull requests, and read what they\nfound — findings, files and the run history behind them.\n\nReview was part of ADE itself until plugins existed. Nothing about it changed —\nit stopped being something everyone has to carry. Install it and the Review tab\nis in your rail; remove it and the rail is one item shorter.\n\n### What it adds\n\n- The **Review** tab.\n\n### Notes\n\n- The page is drawn by the desktop app rather than published as a panel. On a\n  phone or in the terminal the plugin shows a card pointing at the computer that\n  holds the repository.\n- The `/review` route and Review links open only while this plugin is installed\n  and enabled. Otherwise ADE says plainly that it is not here.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
@@ -172,7 +179,7 @@
       "displayName": "High contrast",
       "description": "Maximum separation between text, edges and background. For bad light and tired eyes.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-theme-contrast",
       "changelogUrl": "https://github.com/arul28/ade-theme-contrast/releases",
       "official": true,
@@ -184,9 +191,10 @@
       "accent": "#FFD54A",
       "stars": 0,
       "publishedAt": "2026-08-11T18:14:31Z",
-      "updatedAt": "2026-08-11T18:14:35Z",
+      "updatedAt": "2026-08-13T03:35:36Z",
       "checksums": {
-        "1.0.0": "482c3817176d0fcd0a29cf3600838161da44ae51642ae3e6802a8ca5b57c99f9"
+        "1.0.0": "482c3817176d0fcd0a29cf3600838161da44ae51642ae3e6802a8ca5b57c99f9",
+        "1.0.1": "8c834fe8b511e3c3111ac4969050de0a0aed0da73e5ad406064b32c62f69876b"
       },
       "readme": "## High contrast\n\nBlack on white and white on black, with edges you can actually see: borders and\nseparators are raised well above ADE's default whisper, and muted text stops\nbeing muted. For bad light, glare, and eyes at the end of a long day.\n\nThe accents are chosen for separation rather than for taste — amber on black,\nstrong blue on white — and the status colours are pushed to match, so a warning\nstill reads as a warning at a glance.\n\nBoth sets ship, so switching between light and dark keeps the theme.\n\nNote: coverage is as good as ADE's own design tokens. Surfaces that still carry\nhard-coded colours are unchanged by any theme, this one included."
     },
@@ -195,7 +203,7 @@
       "displayName": "Ink",
       "description": "Deep blue-black with a steel accent. Quiet under long sessions.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-theme-ink",
       "changelogUrl": "https://github.com/arul28/ade-theme-ink/releases",
       "official": true,
@@ -207,9 +215,10 @@
       "accent": "#6FA8C7",
       "stars": 0,
       "publishedAt": "2026-08-11T18:14:26Z",
-      "updatedAt": "2026-08-11T18:14:30Z",
+      "updatedAt": "2026-08-13T03:35:35Z",
       "checksums": {
-        "1.0.0": "f3629aff74df060b3b8d1dcb09acf56b1062039303c24a0066c97f283d83fcfe"
+        "1.0.0": "f3629aff74df060b3b8d1dcb09acf56b1062039303c24a0066c97f283d83fcfe",
+        "1.0.1": "2e5694af20e48dc1d214aae1320ca4490e87c750e7d568839e851626c1ef8d90"
       },
       "readme": "## Ink\n\nDeep blue-black with a steel accent. Lower saturation than the default palette\nand no violet, for people who spend the whole day in one window and want the\ninterface to stop asking for attention.\n\nShips both sets: the dark one is the point, and the light one keeps the same\nsteel accent at a contrast that works on white."
     },
@@ -218,7 +227,7 @@
       "displayName": "Paper",
       "description": "Warm paper and ink, with a clay accent. For working in daylight.",
       "author": "arul28",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "repo": "https://github.com/arul28/ade-theme-paper",
       "changelogUrl": "https://github.com/arul28/ade-theme-paper/releases",
       "official": true,
@@ -230,9 +239,10 @@
       "accent": "#A05C36",
       "stars": 0,
       "publishedAt": "2026-08-11T18:14:19Z",
-      "updatedAt": "2026-08-11T18:14:24Z",
+      "updatedAt": "2026-08-13T03:35:33Z",
       "checksums": {
-        "1.0.0": "3368d735b474c3df2679d9b6eb4ac0539135c25104f1163e748f8a9c8956dca4"
+        "1.0.0": "3368d735b474c3df2679d9b6eb4ac0539135c25104f1163e748f8a9c8956dca4",
+        "1.0.1": "ecb5b091950a61e4c982f7dafcf611effc0f4112f546c1d6ed07bc2d21084e10"
       },
       "readme": "## Paper\n\nWarm paper and ink, with a clay accent — the palette of something printed rather\nthan something emitted. Made for working in daylight, where ADE's default dark\nsurfaces go flat.\n\nShips both a light and a dark set. A theme that defines only one of them silently\ngives up half of itself the moment you switch, so the dark set here is the same\npalette after sundown: warm browns, the same clay accent lifted for contrast.\n\nPreview it before applying — the Marketplace paints the whole app while you look\nat it, and Escape puts it back."
     }
