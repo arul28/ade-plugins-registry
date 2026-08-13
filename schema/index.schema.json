@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/ade-plugins/ade-plugins-registry/main/schema/index.schema.json",
+  "$id": "https://raw.githubusercontent.com/arul28/ade-plugins-registry/main/schema/index.schema.json",
   "title": "ADE plugin registry index",
   "description": "The document the crawler writes and every ADE install reads. Kept in step with apps/desktop/src/shared/plugins/registryIndex.ts, which is the enforcing copy — this file documents the contract and lets the crawler validate before publishing. Objects stay open (additionalProperties true) and only identity is required, because that is what the enforcing parser does: it accepts an index from a newer registry and degrades field by field. A schema that refused unknown fields would make every registry change a flag day across every installed ADE, and would have failed a document the app itself accepts.",
   "type": "object",
@@ -43,6 +43,31 @@
       "type": "string",
       "pattern": "^[a-f0-9]{64}$"
     },
+    "hexColor": {
+      "type": "string",
+      "pattern": "^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$"
+    },
+    "media": {
+      "description": "One screenshot or clip. `kind` decides which element the app renders it in; it is never sniffed from the URL.",
+      "type": "object",
+      "required": ["kind", "src"],
+      "additionalProperties": true,
+      "properties": {
+        "kind": { "enum": ["image", "video"] },
+        "src": { "$ref": "#/$defs/httpsUrl" },
+        "caption": { "type": "string", "maxLength": 160 }
+      }
+    },
+    "extraDownload": {
+      "description": "One asset the plugin fetches on first use. The label is the plugin's own words for it and is shown beside the figure, so it is bounded like every other piece of third-party text on the page.",
+      "type": "object",
+      "required": ["label", "bytes"],
+      "additionalProperties": true,
+      "properties": {
+        "label": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "bytes": { "type": "integer", "minimum": 1 }
+      }
+    },
     "surface": {
       "enum": ["work", "lanes", "files", "prs", "automations", "cto"]
     },
@@ -54,7 +79,8 @@
         "detail-section",
         "empty-state",
         "filter-chip",
-        "file-viewer"
+        "file-viewer",
+        "composer-action"
       ]
     },
     "entry": {
@@ -80,8 +106,43 @@
           "$ref": "#/$defs/httpsUrl"
         },
         "changelogUrl": { "$ref": "#/$defs/httpsUrl" },
-        "icon": { "type": "string", "maxLength": 64 },
-        "accent": { "type": "string", "pattern": "^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$" },
+        "iconGlyph": {
+          "description": "A glyph name from ADE's curated icon set. Only a hint: an entry that names none is drawn with a glyph and colour derived from its pluginId, so no plugin is ever iconless.",
+          "type": "string",
+          "maxLength": 64
+        },
+        "iconColor": { "$ref": "#/$defs/hexColor" },
+        "iconUrl": {
+          "description": "A custom image tile. Must be reachable under the app's media allowlist (raw.githubusercontent.com and the user-images hosts); anything else loads as nothing and falls back to the glyph.",
+          "$ref": "#/$defs/httpsUrl"
+        },
+        "icon": {
+          "description": "The first schema's name for iconGlyph. Still read; write iconGlyph.",
+          "type": "string",
+          "maxLength": 64
+        },
+        "accent": {
+          "description": "The first schema's name for iconColor. Still read; write iconColor.",
+          "$ref": "#/$defs/hexColor"
+        },
+        "media": {
+          "description": "Screenshots and clips for the detail page's gallery. Items past the eighth are dropped by readers.",
+          "type": "array",
+          "maxItems": 8,
+          "items": { "$ref": "#/$defs/media" }
+        },
+        "links": {
+          "description": "Named links for the detail page's resources rail. A fixed set of slots: an entry cannot name its own labels, because those labels sit on controls ADE draws.",
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "repository": { "$ref": "#/$defs/httpsUrl" },
+            "homepage": { "$ref": "#/$defs/httpsUrl" },
+            "changelog": { "$ref": "#/$defs/httpsUrl" },
+            "license": { "$ref": "#/$defs/httpsUrl" },
+            "docs": { "$ref": "#/$defs/httpsUrl" }
+          }
+        },
         "official": {
           "description": "Curated by ADE. Set from official.json, never from the plugin's own manifest.",
           "type": "boolean"
@@ -114,6 +175,17 @@
           "minimum": 0
         },
         "stars": { "type": "integer", "minimum": 0 },
+        "sizeBytes": {
+          "description": "What installing the plugin costs to download, in bytes. Approximate — the crawler derives it from the GitHub repository size, which counts the packed repository rather than a release artefact. Omit when unmeasured: readers render an omitted size as nothing, and a published 0 would read as a measured zero, so 0 is refused here too.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "extraDownloads": {
+          "description": "What the plugin fetches for ITSELF after installing — a speech model, a runtime, a data pack. Declared by the plugin in its own plugin.json and passed through by the crawler. Published because a small package that then pulls down a large asset is a large decision, and quoting only the package size would be honest about the wrong number.",
+          "type": "array",
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/extraDownload" }
+        },
         "publishedAt": { "type": "string", "format": "date-time" },
         "updatedAt": { "type": "string", "format": "date-time" },
         "readme": { "type": "string", "maxLength": 32768 },
