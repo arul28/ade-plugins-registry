@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T19:27:18.304Z",
+  "generatedAt": "2026-08-14T13:45:29.177Z",
   "entries": [
     {
       "pluginId": "ade-app-control",
@@ -315,6 +315,36 @@
         "1.0.1": "ecb5b091950a61e4c982f7dafcf611effc0f4112f546c1d6ed07bc2d21084e10"
       },
       "readme": "## Paper\n\nWarm paper and ink, with a clay accent — the palette of something printed rather\nthan something emitted. Made for working in daylight, where ADE's default dark\nsurfaces go flat.\n\nShips both a light and a dark set. A theme that defines only one of them silently\ngives up half of itself the moment you switch, so the dark set here is the same\npalette after sundown: warm browns, the same clay accent lifted for contrast.\n\nPreview it before applying — the Marketplace paints the whole app while you look\nat it, and Escape puts it back."
+    },
+    {
+      "pluginId": "ade-tipsy",
+      "displayName": "Tipsy",
+      "description": "A playful, opt-in drink meter for your ADE agent.",
+      "author": "arul28",
+      "version": "0.1.0",
+      "repo": "https://github.com/arul28/ade-tipsy",
+      "changelogUrl": "https://github.com/arul28/ade-tipsy/releases",
+      "official": false,
+      "featured": false,
+      "isTheme": false,
+      "surfaces": [
+        "work"
+      ],
+      "sockets": [
+        "composer-action"
+      ],
+      "iconGlyph": "beer",
+      "icon": "beer",
+      "iconColor": "#D8892B",
+      "accent": "#D8892B",
+      "links": {
+        "repository": "https://github.com/arul28/ade-tipsy",
+        "changelog": "https://github.com/arul28/ade-tipsy/releases"
+      },
+      "stars": 0,
+      "sizeBytes": 5120,
+      "publishedAt": "2026-08-14T08:02:05Z",
+      "updatedAt": "2026-08-14T08:02:09Z"
     },
     {
       "pluginId": "ade-voice",
