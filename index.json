@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T20:47:35.760Z",
+  "generatedAt": "2026-09-05T04:33:23.369Z",
   "entries": [
     {
       "pluginId": "ade-app-control",
@@ -92,7 +92,8 @@
       "checksums": {
         "1.0.0": "241a2a21dc932f32c1e653b1298ea3d98f53fb68dc90c31ca4eddf87c6076570",
         "1.0.1": "1dd4e446820a8a9e0c74e40650bd561ac3d6c6102269d66e36b9391d1636d6ae"
-      }
+      },
+      "readme": "## History\n\nCommits, lane operations, branch links and the artifacts ADE captured along the\nway — everything that already happened in this project, in one place.\n\nHistory was part of ADE itself until plugins existed. Nothing about it changed —\nit stopped being something everyone has to carry. Install it and the History tab\nis in your rail; remove it and the rail is one item shorter.\n\n### What it adds\n\n- The **History** tab.\n\n### Notes\n\n- The page is drawn by the desktop app rather than published as a panel. On a\n  phone or in the terminal the plugin shows a card pointing at the computer that\n  holds the repository.\n- The `/history` route and artifact links open only while this plugin is\n  installed and enabled. Otherwise ADE says plainly that it is not here.\n- It runs no code at all: the card is `panels/main.json`, which ADE reads from\n  the manifest. Nothing is read, and nothing is stored."
     },
     {
       "pluginId": "ade-ios-sim",
